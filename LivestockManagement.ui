@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LivestockManagement</class>
+ <widget class="QMainWindow" name="LivestockManagement">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1560</width>
+    <height>823</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Farm Flow - Livestock Management</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QWidget#centralwidget {
+    background-color: #b3ce9a;
+}
+QLabel {
+    color: #5D5A4A;
+    font-family: &quot;Poor Richard&quot;;
+    font-size: 10pt;
+    font-weight: bold;
+}
+QLabel#titleLabel {
+    color: #5D5A4A;
+    font-family: &quot;Papyrus&quot;;
+    font-size: 32pt;
+    font-weight: bold;
+}
+QGroupBox {
+    color: #087438;
+    font-family: &quot;Poor Richard&quot;;
+    font-size: 15pt;
+    font-weight: bold;
+    border: 1px solid #94B375;
+    margin-top: 10px;
+    padding: 8px;
+}
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 4px;
+}
+QLineEdit, QComboBox {
+    background-color: #FFFFFF;
+    color: #5D5A4A;
+    font-family: &quot;Poor Richard&quot;;
+    font-size: 10pt;
+    border: 1px solid #94B375;
+    padding: 4px;
+}
+QPushButton {
+    background-color: #D5E9C1;
+    color: #5F734C;
+    font-family: &quot;Poor Richard&quot;;
+    font-size: 10pt;
+    font-weight: bold;
+    border: 1px solid #94B375;
+    padding: 7px;
+}
+QTableWidget {
+    background-color: #FFFFFF;
+    alternate-background-color: #EAF2E7;
+    color: #5D5A4A;
+    font-family: &quot;Poor Richard&quot;;
+    font-size: 9pt;
+    gridline-color: #94B375;
+}
+QHeaderView::section {
+    background-color: #94B375;
+    color: #5D5A4A;
+    font-family: &quot;Poor Richard&quot;;
+    font-size: 9pt;
+    font-weight: bold;
+    border: 1px solid #FFFFFF;
+    padding: 5px;
+}</string>
+   </property>
+   <widget class="QLabel" name="titleLabel">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>10</y>
+      <width>543</width>
+      <height>84</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Livestock Management</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="livestockInformationGroup">
+    <property name="geometry">
+     <rect>
+      <x>25</x>
+      <y>92</y>
+      <width>571</width>
+      <height>207</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #d5e9c1;
+border: 1 px solid  #d5e9c1;</string>
+    </property>
+    <property name="title">
+     <string>Livestock Information</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <widget class="QLabel" name="animalIDLabel">
+         <property name="text">
+          <string>Livestock ID:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="breedLabel">
+         <property name="text">
+          <string>Livestock Name:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="ageLabel">
+         <property name="text">
+          <string>Quantity:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="notesLabel">
+         <property name="text">
+          <string>Product:</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="0" column="1">
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QLineEdit" name="animalID">
+         <property name="styleSheet">
+          <string notr="true">background-color:#b3ce9a;
+border: 1px solid #5D5A4A;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="breed">
+         <property name="styleSheet">
+          <string notr="true">background-color:#b3ce9a;
+border: 1px solid #5D5A4A;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="age">
+         <property name="styleSheet">
+          <string notr="true">background-color:#b3ce9a;
+border: 1px solid #5D5A4A;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="notes">
+         <property name="styleSheet">
+          <string notr="true">background-color:#b3ce9a;
+border: 1px solid #5D5A4A;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="0" column="2">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QPushButton" name="addAnimalButton">
+         <property name="styleSheet">
+          <string notr="true">background-color: #b3ce9a;</string>
+         </property>
+         <property name="text">
+          <string>Add Animal</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="updateButton">
+         <property name="styleSheet">
+          <string notr="true">background-color: #b3ce9a;</string>
+         </property>
+         <property name="text">
+          <string>Update</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="deleteButton">
+         <property name="styleSheet">
+          <string notr="true">background-color: #b3ce9a;</string>
+         </property>
+         <property name="text">
+          <string>Delete</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="clearButton">
+         <property name="styleSheet">
+          <string notr="true">background-color: #b3ce9a;</string>
+         </property>
+         <property name="text">
+          <string>Clear</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="existingLivestockGroup">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>320</y>
+      <width>1011</width>
+      <height>441</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #d5e9c1;
+border: none</string>
+    </property>
+    <property name="title">
+     <string>Existing Livestock</string>
+    </property>
+    <widget class="QTableWidget" name="livestockTable">
+     <property name="geometry">
+      <rect>
+       <x>19</x>
+       <y>29</y>
+       <width>971</width>
+       <height>381</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QHeaderView::section {
+    background-color: #94b375;
+    color: #5D5A4A;
+    border: 1px solid #5D5A4A;
+    padding: 6px;
+    font-weight: bold;
+}
+QTableWidget {
+    background-color: #b3ce9a;
+    color: #5f734c;
+    gridline-color: #B8CDBA;
+    alternate-background-color: #EAF2E7;
+} </string>
+     </property>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <property name="rowCount">
+      <number>0</number>
+     </property>
+     <property name="columnCount">
+      <number>4</number>
+     </property>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>144</number>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>LivestockID</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Livestock Name</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Quantity</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Product</string>
+      </property>
+     </column>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>560</y>
+      <width>1511</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>sticker4.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>110</y>
+      <width>371</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>7.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BACKBUTTON">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>20</y>
+      <width>141</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Poor Richard</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> background-color: #94b375;
+ color: #5D5A4A;
+border: 1px solid #5D5A4A;</string>
+    </property>
+    <property name="text">
+     <string>Back to Menu</string>
+    </property>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>titleLabel</zorder>
+   <zorder>livestockInformationGroup</zorder>
+   <zorder>existingLivestockGroup</zorder>
+   <zorder>label_2</zorder>
+   <zorder>BACKBUTTON</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

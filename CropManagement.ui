@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CropManagement</class>
+ <widget class="QMainWindow" name="CropManagement">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1560</width>
+    <height>825</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Farm Flow: Crop Management</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">BACKGROUND-COLOR:  #b3ce9a;n</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="titleLabel">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>10</y>
+      <width>447</width>
+      <height>84</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Papyrus</family>
+      <pointsize>32</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #5D5A4A</string>
+    </property>
+    <property name="text">
+     <string>Crop Management</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="cropInformationGroup">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>100</y>
+      <width>521</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1063</width>
+      <height>219</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>Poor Richard</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <stylestrategy>PreferDefault</stylestrategy>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #d5e9c1; 
+color:  #087438</string>
+    </property>
+    <property name="title">
+     <string>Crop Information</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="cropIDLabel">
+         <property name="font">
+          <font>
+           <family>Poor Richard</family>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #5D5A4A</string>
+         </property>
+         <property name="text">
+          <string>Crop ID:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="cropNameLabel">
+         <property name="font">
+          <font>
+           <family>Poor Richard</family>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #5D5A4A</string>
+         </property>
+         <property name="text">
+          <string>Crop Name:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="categoryLabel">
+         <property name="font">
+          <font>
+           <family>Poor Richard</family>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #5D5A4A</string>
+         </property>
+         <property name="text">
+          <string>Crop Type:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="growthDurationLabel">
+         <property name="font">
+          <font>
+           <family>Poor Richard</family>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: #5D5A4A</string>
+         </property>
+         <property name="text">
+          <string>Growth Duration:</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="0" column="1">
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QLineEdit" name="cropID">
+         <property name="font">
+          <font>
+           <family>Poor Richard</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #b3ce9a;
+border: 1px solid #5D5A4A;
+color: #5D5A4A</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="cropName">
+         <property name="font">
+          <font>
+           <family>Poor Richard</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #b3ce9a;
+border: 1px solid #5D5A4A;
+color: #5D5A4A</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="category">
+         <property name="font">
+          <font>
+           <family>Poor Richard</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #b3ce9a;
+border: 1px solid #5D5A4A;
+color: #5D5A4A</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>Cereal</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Vegetable</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Fruit</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="growthDuration">
+         <property name="font">
+          <font>
+           <family>Poor Richard</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #b3ce9a;
+border: 1px solid #5D5A4A;
+color: #5D5A4A</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="0" column="2">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QPushButton" name="addCropButton">
+         <property name="font">
+          <font>
+           <family>Poor Richard</family>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #b3ce9a;
+color: #5f734c</string>
+         </property>
+         <property name="text">
+          <string>Add Crop</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="updateButton">
+         <property name="font">
+          <font>
+           <family>Poor Richard</family>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #b3ce9a;
+color: #5f734c</string>
+         </property>
+         <property name="text">
+          <string>Update</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="deleteButton">
+         <property name="font">
+          <font>
+           <family>Poor Richard</family>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #b3ce9a;
+color: #5f734c</string>
+         </property>
+         <property name="text">
+          <string>Delete</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="clearButton">
+         <property name="font">
+          <font>
+           <family>Poor Richard</family>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: #b3ce9a;
+color: #5f734c</string>
+         </property>
+         <property name="text">
+          <string>Clear</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="existingCropsGroup">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>310</y>
+      <width>931</width>
+      <height>431</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Poor Richard</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #d5e9c1; 
+color:  #087438</string>
+    </property>
+    <property name="title">
+     <string>Existing Crops</string>
+    </property>
+    <widget class="QTableWidget" name="cropTable">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>40</y>
+       <width>891</width>
+       <height>371</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QHeaderView::section {
+    background-color: #94b375;
+    color: #5D5A4A;
+    padding: 6px;
+    font-weight: bold;
+}
+QTableWidget {
+background-color: #b3ce9a;
+}</string>
+     </property>
+     <property name="rowCount">
+      <number>0</number>
+     </property>
+     <property name="columnCount">
+      <number>3</number>
+     </property>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>205</number>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>Crop ID</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Crop Type</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Growth Duration</string>
+      </property>
+     </column>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>480</y>
+      <width>1551</width>
+      <height>341</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>sticker4.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>100</y>
+      <width>251</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>6.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BACKBUTTON">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>30</y>
+      <width>141</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> background-color: #94b375;
+ color: #5D5A4A;
+border: 1px solid #5D5A4A;</string>
+    </property>
+    <property name="text">
+     <string>Back to Menu</string>
+    </property>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>titleLabel</zorder>
+   <zorder>cropInformationGroup</zorder>
+   <zorder>existingCropsGroup</zorder>
+   <zorder>label_2</zorder>
+   <zorder>BACKBUTTON</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

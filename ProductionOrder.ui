@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ProductionOrder</class>
+ <widget class="QMainWindow" name="ProductionOrder">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1561</width>
+    <height>823</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Farm Flow - Production Order</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">background-color: #b3ce9a;</string>
+   </property>
+   <widget class="QLabel" name="titleLabel">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>20</y>
+      <width>461</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Papyrus</family>
+      <pointsize>32</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #5D5A4A;</string>
+    </property>
+    <property name="text">
+     <string>Farm Production</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="productionOrderInformationGroup">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>631</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Poor Richard</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #087438;
+background-color: #d5e9c1;</string>
+    </property>
+    <property name="title">
+     <string>Production Order Information</string>
+    </property>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>20</y>
+       <width>181</width>
+       <height>191</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QPushButton" name="addOrderButton">
+        <property name="font">
+         <font>
+          <family>Poor Richard</family>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #b3ce9a; color: #5f734c;</string>
+        </property>
+        <property name="text">
+         <string>Add Order</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="updateButton">
+        <property name="font">
+         <font>
+          <family>Poor Richard</family>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #b3ce9a; color: #5f734c;</string>
+        </property>
+        <property name="text">
+         <string>Update</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="deleteButton">
+        <property name="font">
+         <font>
+          <family>Poor Richard</family>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #b3ce9a; color: #5f734c;</string>
+        </property>
+        <property name="text">
+         <string>Delete</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="clearButton">
+        <property name="font">
+         <font>
+          <family>Poor Richard</family>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #b3ce9a; color: #5f734c;</string>
+        </property>
+        <property name="text">
+         <string>Clear</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>41</y>
+       <width>281</width>
+       <height>150</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLineEdit" name="orderID">
+        <property name="font">
+         <font>
+          <family>Poor Richard</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #b3ce9a; border: 1px solid #5D5A4A; color: #5D5A4A;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QDateEdit" name="orderDate">
+        <property name="font">
+         <font>
+          <family>Poor Richard</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #b3ce9a; border: 1px solid #5D5A4A; color: #5D5A4A;</string>
+        </property>
+        <property name="displayFormat">
+         <string>yyyy-MM-dd</string>
+        </property>
+        <property name="calendarPopup">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="product">
+        <property name="font">
+         <font>
+          <family>Poor Richard</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #b3ce9a; border: 1px solid #5D5A4A; color: #5D5A4A;</string>
+        </property>
+        <item>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="quantity">
+        <property name="font">
+         <font>
+          <family>Poor Richard</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #b3ce9a; border: 1px solid #5D5A4A; color: #5D5A4A;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="unit">
+        <property name="font">
+         <font>
+          <family>Poor Richard</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: #b3ce9a; border: 1px solid #5D5A4A; color: #5D5A4A;</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>kg</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>g</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>litre</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>piece</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>41</y>
+       <width>97</width>
+       <height>141</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QLabel" name="orderIDLabel">
+        <property name="font">
+         <font>
+          <family>Poor Richard</family>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #5D5A4A;</string>
+        </property>
+        <property name="text">
+         <string>Production Id</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="dateLabel">
+        <property name="font">
+         <font>
+          <family>Poor Richard</family>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #5D5A4A;</string>
+        </property>
+        <property name="text">
+         <string>Date:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="productTypeLabel">
+        <property name="font">
+         <font>
+          <family>Poor Richard</family>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #5D5A4A;</string>
+        </property>
+        <property name="text">
+         <string>Product ID</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="quantityLabel">
+        <property name="font">
+         <font>
+          <family>Poor Richard</family>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #5D5A4A;</string>
+        </property>
+        <property name="text">
+         <string>Quantity:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="unitLabel">
+        <property name="font">
+         <font>
+          <family>Poor Richard</family>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: #5D5A4A;</string>
+        </property>
+        <property name="text">
+         <string>Unit:</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="existingProductionOrdersGroup">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>330</y>
+      <width>1061</width>
+      <height>421</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Poor Richard</family>
+      <pointsize>15</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #087438; background-color: #d5e9c1;</string>
+    </property>
+    <property name="title">
+     <string>Existing Production Orders</string>
+    </property>
+    <layout class="QVBoxLayout" name="tableLayout">
+     <item>
+      <widget class="QTableWidget" name="productionTable">
+       <property name="styleSheet">
+        <string notr="true">QHeaderView::section {
+background-color: #94b375;
+color: #5D5A4A;
+border: 1px solid #5D5A4A;
+padding: 6px;
+font-weight: bold;
+}
+QTableWidget {
+background-color: #b3ce9a;
+color: #5f734c;
+gridline-color: #B8CDBA;
+alternate-background-color: #EAF2E7;
+}
+
+</string>
+       </property>
+       <property name="alternatingRowColors">
+        <bool>false</bool>
+       </property>
+       <property name="selectionBehavior">
+        <enum>QAbstractItemView::SelectRows</enum>
+       </property>
+       <property name="rowCount">
+        <number>0</number>
+       </property>
+       <property name="columnCount">
+        <number>5</number>
+       </property>
+       <attribute name="horizontalHeaderDefaultSectionSize">
+        <number>115</number>
+       </attribute>
+       <column>
+        <property name="text">
+         <string>Production ID</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Date</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Product ID</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Quantity</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Unit</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>850</y>
+      <width>1081</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>sticker4.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>90</y>
+      <width>331</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>9.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="BACKBUTTON">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>141</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"> background-color: #94b375;
+ color: #5D5A4A;
+border: 1px solid #5D5A4A;</string>
+    </property>
+    <property name="text">
+     <string>Back to Menu</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>420</y>
+      <width>1521</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>sticker4.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <zorder>label_3</zorder>
+   <zorder>titleLabel</zorder>
+   <zorder>productionOrderInformationGroup</zorder>
+   <zorder>existingProductionOrdersGroup</zorder>
+   <zorder>label</zorder>
+   <zorder>label_2</zorder>
+   <zorder>BACKBUTTON</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
